@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="/static/css/ejercicio2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 2:</h1>
+        <form action="/ejer2" method="post">
+            <label>Nombre 1:</label>
+            <input type="text" name="nombre_1" required>
+            <label>Nombre 2: </label>
+            <input type="text" name="nombre_2" required>
+            <label>Nombre 3: </label>
+            <input type="text" name="nombre_3" required>
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if resultado %}
+
+        <div class ="resultado">
+            <p>Nombre más largo es: {{ resultado.nombre }}</p>
+            <p>Cantidad de caracteres: {{ resultado.longitud }}</p>
+        </div>
+        {% endif %}
+
+      <button type="button" onclick="alert('Botón presionado')">Presionar</button>
+
+
+    </div>
+</body>
+</html>

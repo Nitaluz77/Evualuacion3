@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="/static/css/ejercicio1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 1:</h1>
+        <form action="/ejer1" method="post">
+            <label>Nota 1:</label>
+            <input type="number" name="nota_1" min="10" max="70" required>
+            <label>Nota 2:</label>
+            <input type="number" name="nota_2" min="10" max="70" required>
+            <label>Nota 3:</label>
+            <input type="number" name="nota_3" min="10" max="70" required>
+            <label>Asistencia (%):</label>
+            <input type="number" name="asistencia" min="0" max="100" required>
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if resultado %}
+            <p>Promedio: {{ resultado.promedio }}</p>
+            <p>Estado: {{ resultado.estado }}</p>
+        {% endif %}
+
+        <button onclick="window.location.href='/'">Volver al Menú</button>
+    </div>
+</body>
+</html>
